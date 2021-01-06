@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Conditional Demo</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      // Here we create our prompt and confirm variables which will store user input.
+      // Ask user preference on steak with alerts, and ask what the user’s birth year is to confirm drinking age.
+
+      var confirmSteak = confirm("Do you like steak?")
+      if (confirmSteak === true) alert("Here's a nice steak then")
+      if (confirmSteak === false) alert( "You don't like steak, wtf..")
+
+      var birthYear = prompt("What is your birth year?")
+      if (birthYear > 1999) alert("No beer for you then..")
+      else alert("You get beer!");
+    </script>
+
+  </body>
+</html>
