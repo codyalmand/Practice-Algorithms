@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Write a function equals that checks two values for strict equality. 
+    If the two values are equal, the string 'EQUAL' should be returned. 
+    If they are unequal, you should get 'UNEQUAL'. -->
+
+    function equals( a, b ) {
+        let c = 'UNEQUAL';
+        if (a === b) {
+        c = 'EQUAL';
+        }
+        return c;
+    }
+
+<!-- Write a function repdigit that determines whether a two-digit decimal is a repdigit or not.
+     If the decimal is a repdigit, 'Repdigit!' should be returned, otherwise 'No Repdigit!'. -->
+
+     function repdigit(n) {
+        let ones = n % 10;
+        let tens = Math.floor(n / 10);
+        if (ones === tens) {
+          return 'Repdigit!';
+        }
+        return 'No Repdigit!';
+      }
+    
+<!-- Write a function addWithSurcharge that adds two amounts with surcharge. 
+    For each amount less than or equal to 10, the surcharge is 1. For each amount greater than 10, the surcharge is 2. -->
+    
+    function addWithSurcharge(a, b) {
+        let surcharge = 0;
+        if (a <= 10) {
+          surcharge = surcharge + 1;
+       } else {
+          surcharge = surcharge +2;
+       }
+        if (b <= 10) {
+          surcharge = surcharge + 1;
+       } else {
+          surcharge = surcharge + 2;
+       }
+        return a + b + surcharge;
+    }
+
+<!-- Write a function getFirstElement that takes an array and returns the first element of the array. -->
+
+    function getFirstElement(a){
+        let array = a;
+        return array[0];
+    }
+
+<!-- Write a function setFirstElement that takes an array and an arbitrary variable.
+     The variable should be inserted as the first element in the array. The array should be returned. -->
+
+     function setFirstElement(a, b){
+        a[0] = b;
+        return a;
+    }
+
+<!-- Write a function getLastElement that takes an array and returns the last element of the array. -->
+
+    function getLastElement(a){
+        let b = a.length -1;
+        return a[b];
+    }
+
+<!-- Write a function rotate that rotates the elements of an array. All elements should be moved one position to the left. 
+    The 0th element should be placed at the end of the array. The rotated array should be returned. -->
+
+    function rotate(a){
+        let b = a.shift();
+        a.push(b);
+        return a;
+    }
+
+<!-- Write a function concatUp that concatenate two arrays. The longer array should be appended to the shorter array.
+     If both arrays are equally long, the second array should be appended to the first array. -->
+
+     function concatUp(a, b){
+        if (b.length >= a.length) {
+        return a.concat(b);
+       }
+        return b.concat(a);
+    }
+
+<!-- Write a function list that takes an array of words and returns a string by concatenating the words in the array, 
+    separated by commas and - the last word - by an 'and'. An empty array should return an empty string. -->
+
+    function list(words) {
+        if (words.length === 0) {
+          return '';
+        }
+        if (words.length === 1) {
+          return words[0];
+        }
+        let wordsExLast = words.slice(0, words.length - 1);
+        let lastWord = words[words.length - 1];
+        return wordsExLast.join(', ') + ' and ' + lastWord;
+    }
+
+
+
+
+
+
+
+
+</body>
+</html>
