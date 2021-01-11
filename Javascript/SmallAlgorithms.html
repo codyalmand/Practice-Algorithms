@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Write a function shout that takes a string and returns this string duplicated.
+In addition, the return should be logged. -->
+
+function shout(word){
+    let result = word + word;
+     console.log(result);
+    return result;
+    }
+
+<!-- Write a function length that takes a string and returns the number of characters of the string. -->
+
+function length(word){
+    let length = 'string';
+        return word.length;
+    }
+
+<!-- Write a function toCase that takes a string and returns that string in lowercase and uppercase with - as delimiter. -->
+
+function toCase(text){
+    return text.toLowerCase() + '-' + text.toUpperCase();
+   }
+
+<!-- Write a function shortcut that takes two strings and returns the initial letters of theses strings. -->
+
+function shortcut(word, word2) {
+    return word.charAt(0) + word2.charAt(0);
+   }
+
+<!-- Write a function firstChar, which returns the first character that is not a space when a string is passed. -->
+
+function firstChar(string){
+    let trimString = string.trim();
+   return trimString.charAt(0);
+   }
+
+<!-- Write a function indexOfIgnoreCase taking two strings 
+    and determining the first occurrence of the second string in the first string.
+     The function should be case insensitive. -->
+
+function indexOfIgnoreCase(s1, s2) {
+    let lower = s1.toLowerCase();
+    let lower2 = s2.toLowerCase();
+    return lower.indexOf(lower2);
+}
+
+<!-- Write a function secondIndexOf, 
+    taking two strings and determining the second occurrence of the second string in the first string. 
+    If the search string does not occur twice, -1 should be returned. -->
+
+function secondIndexOf(s1, s2) {
+    let str1 = s1.indexOf(s2);
+    return s1.indexOf(s2, str1 + 1);
+}
+
+<!-- Write a function firstWord, taking a string and returning the first word in that string. 
+    The first word are all characters up to the first space. -->
+
+function firstWord(s) {
+    let f = s.indexOf(' ');
+    return s.substr(0, f);
+}
+
+<!-- Write a function normalize, that replaces '-' with '/' in a date string. -->
+
+function normalize(date){
+    let newDate = date.replace('-','/');
+    let newNewDate = newDate.replace('-','/');
+    return newNewDate;
+}
+
+<!-- Write a function add that takes two numbers and returns their sum. -->
+
+function add(num1, num2){
+    let addThese = num1 + num2;
+    return addThese;
+}
+
+<!-- 
+Which value does x have after execution of the following code?
+let x = 3;
+x++;
+x = x * 2;
+x--; 
+
+-->
+
+7
+
+<!-- Write a function toFahrenheit that converts a temperature from Celsius to Fahrenheit. -->
+
+function toFahrenheit(c){
+    return 1.8*c +32;
+}
+
+<!-- Write a function onesDigit that takes a natural number and returns the ones digit of that number. -->
+
+function onesDigit(n) {
+    return n % 10;
+}
+
+<!-- Write a function hypotenuse that calculates the length of the hypotenuse of a right triangle. 
+    The length of the two legs is passed to the function. Tip: In a right triangle the Pythagorean theorem is valid.
+    If a and b are the lengths of the two legs and c is the length of the hypotenuse,
+    the following is true: a² + b² = c². Since 3² + 4² = 5² applies, hypotenuse(3, 4) should return 5. -->
+
+function hypotenuse(a, b){
+    let cSquare = Math.pow(a, 2) + Math.pow(b, 2);
+        return Math.sqrt(cSquare);
+}
+
+<!-- Write a function midrange, that calculates the midrange of 3 numbers. 
+    The midrange is the mean of the smallest and largest number. -->
+
+function midrange(a,b,c){
+    let min = Math.min(a, b, c);
+    let max = Math.max(a, b, c);
+    return (min +max) /2;
+}
+
+<!-- Write a function nand that takes two Boolean values. If both values are true, the result should be false.
+     In the other cases the return should be true. -->
+
+function nand (b,c) {
+    let a = b && c;
+    return !a;
+}
+
+<!-- Write a function equals that checks 3 values for strict equality. 
+    The function should only return true if all 3 values are equal. -->
+
+function equals (a,b,c) {
+    return a === b && a === c;
+}
+
+<!-- Write a function unequal that checks 3 values for strict inequality. 
+    The function should return true if all three parameters are strict unequal. Otherwise false. -->
+
+function unequal(a,b,c) {
+    return a !== b && a !== c && b !== c;
+}
+
+<!-- Write a function isThreeDigit that checks if a number is greater than or equal to 100 and less than 1000. -->
+
+function isThreeDigit(a){
+    return a >= 100 && a < 1000;
+}
+
+
+
+</body>
+</html>
